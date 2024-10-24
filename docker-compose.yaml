@@ -1,0 +1,36 @@
+version: "3.8"
+
+services:
+
+  web:
+    container_name: web
+    restart: always  
+    build: 
+      context: ./frontend
+    ports:
+      - "80:80"
+    expose:
+      - 80  
+
+  api:
+    build: 
+      context: ./backend
+    command: ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
+    volumes:
+      - .:/app
+    ports:
+      - 8000:8000
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+  qdrant:
+      image: qdrant/qdrant:latest
+      ports:
+        - "6333:6333"
+      volumes:
+        - ./data/qdrant_storage:/qdrant/storage  
