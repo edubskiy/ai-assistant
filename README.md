@@ -1,4 +1,4 @@
-# AICA v1 - AI Assistant (Team Proxima)
+# AICA v1 - AI Assistant, ERARTA.AI Team
 
 ## Vision
 Meet our next-generation AI Assistant - a breakthrough in intelligent customer support automation. Powered by state-of-the-art machine learning, it masters the art of data classification across any domain. Whether handling customer inquiries, technical issues, or complex requests, our assistant delivers precise, contextual responses while continuously learning and improving. It's not just a support tool; it's your intelligent partner in delivering exceptional customer experiences.
